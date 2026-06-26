@@ -49,4 +49,20 @@ Applied SHAP TreeExplainer to surface feature-level drivers of default risk per 
 2. FICO score
 3. DTI ratio
 4. Loan amount
-5. Annual
+5. Annual income
+
+![SHAP Summary](shap_summary.png)
+![SHAP Waterfall](shap_waterfall.png)
+
+## Key Insight
+Interest rate was a stronger predictor of default than FICO score — because lenders already price in borrower risk when setting rates, making interest rate a compressed signal of risk that FICO alone doesn't capture.
+
+## Tech Stack
+Python, XGBoost, scikit-learn, SHAP, pandas, matplotlib, seaborn
+
+## Files
+- `credit_risk_scorecard.ipynb` — full notebook with all code and charts
+- `roc_curve.png` — ROC curve comparing both models
+- `threshold_optimization.png` — approval rate vs loss avoided by threshold
+- `shap_summary.png` — SHAP beeswarm plot of feature importance
+- `shap_waterfall.png` — individual applicant explanation
